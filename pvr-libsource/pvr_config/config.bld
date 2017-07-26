@@ -1,8 +1,0 @@
-/* THIS IS A GENERATED FILE -- DO NOT EDIT */
-/* configuro was passed a config.bld file */
-xdc.includeFile("/home/jason/dm365/work-dir/dvssdk402/dmai_2_20_00_15/packages/config.bld");
-/* configuro was passed the target's name explicitly */
-var target  = xdc.module('gnu.targets.arm.GCArmv5T');
-Build.targets = [target];
-/* configuro was passed the target's rootDir explicitly */
-target.rootDir = '/opt/arm-2009q1/';
