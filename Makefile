@@ -92,7 +92,7 @@ $(TARGET):	$(TIMESTAMP_FILE) $(OBJFILES) $(XDC_LFILE) appl/src/source/libpvrres.
 appl/src/source/libpvrres.a : $(RES_OBJFILES)
 	$(AR) rs $@  $^
 	
-	gcc ++
+	gcc --
 
 $(TIMESTAMP_FILE):
 	@date +'#define PVR_DATE "%m-%d-%y"' > $@
