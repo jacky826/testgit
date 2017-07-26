@@ -5,6 +5,3 @@ ccccccc
 dddddddd
 eeeeeeeee
 
-======dev====
-rrrrrrr
-ttttttt
