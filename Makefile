@@ -61,8 +61,8 @@ SOURCES += $(wildcard appl/system-thread/encode/*.c)
 HEADERS += $(wildcard appl/system-thread/decode/*.h) 
 HEADERS += $(wildcard appl/system-thread/encode/*.h) 
 
-#RES_SOURCES = $(wildcard appl/src/source/*.c)
-#RES_OBJFILES = $(RES_SOURCES:%.c=%.o)
+RES_SOURCES = $(wildcard appl/src/source/*.c)
+RES_OBJFILES = $(RES_SOURCES:%.c=%.o)
 
 OBJFILES = $(SOURCES:%.c=%.o)
 
@@ -89,8 +89,10 @@ $(TARGET):	$(TIMESTAMP_FILE) $(OBJFILES) $(XDC_LFILE) appl/src/source/libpvrres.
 	$(LINK.c) -o $@ $^
 	$(MAKE) -C daemon all
 
-#appl/src/source/libpvrres.a : $(RES_OBJFILES)
-#	$(AR) rs $@  $^
+appl/src/source/libpvrres.a : $(RES_OBJFILES)
+	$(AR) rs $@  $^
+	
+	gcc ++
 
 $(TIMESTAMP_FILE):
 	@date +'#define PVR_DATE "%m-%d-%y"' > $@
